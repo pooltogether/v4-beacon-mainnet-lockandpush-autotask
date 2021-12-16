@@ -3,13 +3,13 @@ import { handler } from './handler'
 // To run locally (this code will not be executed in Autotasks)
 if (require.main === module) {
   const {
-    API_KEY,
-    API_SECRET,
+    RELAYER_API_KEY,
+    RELAYER_API_SECRET,
     INFURA_API_KEY: infuraApiKey
   } = process.env;
   handler({
-    apiKey: API_KEY,
-    apiSecret: API_SECRET,
+    apiKey: RELAYER_API_KEY,
+    apiSecret: RELAYER_API_SECRET,
     secrets: {
       infuraApiKey
     }
