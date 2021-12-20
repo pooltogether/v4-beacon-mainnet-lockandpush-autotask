@@ -26,6 +26,7 @@ export async function handler(event: any) {
   }
 
   try {
+    // @ts-ignore
     const transactionPopulated = await beaconDrawLockAndNetworkTotalSupplyPush(mainnetContractList, config)
     if (transactionPopulated) {
 
