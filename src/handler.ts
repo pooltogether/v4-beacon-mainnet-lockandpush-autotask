@@ -7,16 +7,16 @@ export async function handler(event: any) {
   const config = {
     beaconChain: {
       chainId: 1,
-      providerUrl: `https://mainnet.infura.io/v3/${process.env.INFURA_API_KEY}`,
+      providerUrl: `https://mainnet.infura.io/v3/b81e24d29d1942b8bf04bf3c81ae3761`,
     },
     allPrizePoolNetworkChains: [
       {
         chainId: 1,
-        providerUrl: `https://mainnet.infura.io/v3/${process.env.INFURA_API_KEY}`,
+        providerUrl: `https://mainnet.infura.io/v3/b81e24d29d1942b8bf04bf3c81ae3761`,
       },
       {
         chainId: 137,
-        providerUrl: `https://polygon-mainnet.infura.io/v3/${process.env.INFURA_API_KEY}`,
+        providerUrl: `https://polygon-mainnet.infura.io/v3/b81e24d29d1942b8bf04bf3c81ae3761`,
       },
       {
         chainId: 43114,
