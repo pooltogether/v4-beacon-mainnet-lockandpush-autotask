@@ -1,6 +1,6 @@
 import { Relayer } from 'defender-relay-client'
 import { beaconDrawLockAndNetworkTotalSupplyPush } from '@pooltogether/v4-autotask-lib'
-import {mainnet as mainnetContractList } from '@pooltogether/v4-pool-data'
+import { mainnet as mainnetContractList } from '@pooltogether/v4-pool-data'
 
 export async function handler(event: any) {
   const relayer = new Relayer(event);
@@ -42,7 +42,7 @@ export async function handler(event: any) {
 
       console.log('TransactionHash:', transactionSentToNetwork.hash)
     } else {
-      throw new Error('DrawBeacon: Transaction not populated')
+      throw new Error('BeaconTimelockTrigger: Transaction not populated')
     }
   } catch (error) {
     console.log(error)
