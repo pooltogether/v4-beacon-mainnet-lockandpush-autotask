@@ -20,7 +20,7 @@ export async function handler(event: any) {
       },
       {
         chainId: 43114,
-        providerUrl: 'https://api.avax.network/ext/bc/C/rpc',
+        providerUrl: event.secrets.avalancheMainnetProviderURL,
       }
     ]
   }

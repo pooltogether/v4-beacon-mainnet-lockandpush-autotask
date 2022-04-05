@@ -7,7 +7,8 @@ if (require.main === module) {
     RELAYER_API_SECRET,
     INFURA_API_KEY: infuraApiKey,
     ETHEREUM_MAINNET_PROVIDER_URL: ethereumMainnetProviderURL,
-    POLYGON_MAINNET_PROVIDER_URL: polygonMainnetProviderURL
+    POLYGON_MAINNET_PROVIDER_URL: polygonMainnetProviderURL,
+    AVALANCHE_MAINNET_PROVIDER_URL: avalancheMainnetProviderURL
   } = process.env;
   handler({
     apiKey: RELAYER_API_KEY,
@@ -15,7 +16,8 @@ if (require.main === module) {
     secrets: {
       infuraApiKey,
       ethereumMainnetProviderURL,
-      polygonMainnetProviderURL
+      polygonMainnetProviderURL,
+      avalancheMainnetProviderURL
     }
   })
     .then(() => process.exit(0))
