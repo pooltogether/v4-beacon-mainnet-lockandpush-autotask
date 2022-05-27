@@ -1,0 +1,45 @@
+{
+  "name": "v4-beacon-mainnet-lockandpush-autotask",
+  "description": "Defender Autotask to execute Ethereum Mainnet transactions",
+  "version": "0.1.0",
+  "type": "commonjs",
+  "main": "src/cli.js",
+  "author": "PoolTogether Inc",
+  "license": "MIT",
+  "bin": {
+    "ts-node": "./node_modules/bin/ts-node "
+  },
+  "scripts": {
+    "build": "rollup -c rollup.config.js",
+    "update": "yarn build && ./scripts/updateTask.js",
+    "start": "ts-node ./src/cli.ts",
+    "reinstall": "rm -rf node_modules/ && yarn cache clean && yarn"
+  },
+  "dependencies": {
+    "@ethersproject/abstract-provider": "^5.1.0",
+    "@ethersproject/abstract-signer": "^5.1.0",
+    "@ethersproject/providers": "^5.1.0",
+    "@pooltogether/v4-autotask-lib": "1.1.0",
+    "@pooltogether/v4-pool-data": "1.6.0",
+    "aws-sdk": "^2.996.0",
+    "commander": "^6.1.0",
+    "defender-autotask-client": "^1.5.1",
+    "defender-relay-client": "^0.2.4",
+    "ethers": "^5.0.14"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^15.1.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "@rollup/plugin-replace": "^2.3.4",
+    "@rollup/plugin-typescript": "^8.2.5",
+    "@types/node": "^17.0.0",
+    "builtin-modules": "^3.2.0",
+    "chalk": "^4.1.2",
+    "debug": "^4.3.2",
+    "rollup": "^2.28.1",
+    "ts-node": "^10.4.0",
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.4"
+  }
+}
