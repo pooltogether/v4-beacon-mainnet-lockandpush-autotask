@@ -5,13 +5,19 @@ if (require.main === module) {
   const {
     RELAYER_API_KEY,
     RELAYER_API_SECRET,
-    INFURA_API_KEY: infuraApiKey
+    ETHEREUM_MAINNET_PROVIDER_URL: ethereumMainnetProviderURL,
+    POLYGON_MAINNET_PROVIDER_URL: polygonMainnetProviderURL,
+    AVALANCHE_MAINNET_PROVIDER_URL: avalancheMainnetProviderURL,
+    OPTIMISM_MAINNET_PROVIDER_URL: optimismMainnetProviderURL
   } = process.env;
   handler({
     apiKey: RELAYER_API_KEY,
     apiSecret: RELAYER_API_SECRET,
     secrets: {
-      infuraApiKey
+      ethereumMainnetProviderURL,
+      polygonMainnetProviderURL,
+      avalancheMainnetProviderURL,
+      optimismMainnetProviderURL
     }
   })
     .then(() => process.exit(0))
