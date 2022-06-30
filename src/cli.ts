@@ -11,8 +11,8 @@ if (require.main === module) {
     OPTIMISM_MAINNET_PROVIDER_URL: optimismMainnetProviderURL
   } = process.env;
   handler({
-    apiKey: RELAYER_API_KEY,
-    apiSecret: RELAYER_API_SECRET,
+    apiKey,
+    apiSecret,
     secrets: {
       ethereumMainnetProviderURL,
       polygonMainnetProviderURL,
