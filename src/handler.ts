@@ -19,10 +19,6 @@ export async function handler(event: any) {
         providerUrl: event.secrets.polygonMainnetProviderURL,
       },
       {
-        chainId: 43114,
-        providerUrl: event.secrets.avalancheMainnetProviderURL,
-      },
-      {
         chainId: 10,
         providerUrl: event.secrets.optimismMainnetProviderURL,
       }
